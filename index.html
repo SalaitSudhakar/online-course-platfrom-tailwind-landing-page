@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="shortcut icon"
+      href="assets/mortarboard-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "gradient-left-blue": "#083f98",
+              "h1-h2-sub-btn-blue": "#0e38cd",
+              "gradient-right-purple": "#7f56d9",
+              "h3-gray-blue": "#324361",
+              "p-gray": "#4e5968",
+              "back-pale-blue": "#d9ecff",
+              "h2-gray": "#323232",
+              "hero-back-left-blue": "#04016c",
+              "hero-back-right-purple": "#4a16bd",
+              "search-btn-left-blue": "#3023b2",
+              "number-blue": "#0094e7",
+              "logo-sec-top-blue": "#2e08c7",
+              "logo-sec-bottom-purple": "#7e08c7",
+              "course-sec-back-top-white": "#F0F3FF",
+              "course-sec-back-bottom-blue": "#D9ECFF",
+              "course-sec-h2-lightblue": "#4883ff",
+              "circle-border-skyblue": "#23bdee",
+              "explore-course-btn-top-blue": "#083f9b",
+              "whyus-back-left-blue": "#739fe8",
+              "whyus-back-right-blue": "#4f18ca",
+              "categories-p-purple": "#4f547b",
+              "catergories-card1-red": "#df3858",
+              "catergories-card2-purple": "#54ba8e",
+              "catergories-card3-purple": "#7f56d9",
+              "catergories-card4-yellow": "#fab437",
+              "catergories-card5-teal": "#2aaa94",
+              "catergories-card6-mintgreen": "#2cd182",
+              "triangle-blue": "#0094e7",
+              "subscribe-back1-lavender": "#d0b3ff",
+              "subscribe-back2-blue": "#1901fb",
+              "subscribe-back3-purple": "#e441ff",
+              "testimony-text-blue": "#7e7eaa",
+              "footer-back-top-right-blue": "#477ae3",
+              "footer-back-bottom-left-purple": "#931bbd",
+              "social-back-top-blue": "#0351ae",
+              "social-back-bottom-purple": "#a542cb",
+              "copyright-back-blue": "#001aff",
+              "footer-h4-blue": "#0a033c",
+            },
+          },
+          fontFamily: {
+            righteous: ["Righteous, sans-serif"],
+            rowdies: ["Rowdies, serif"],
+            saira: ["Saira, Serif"],
+          },
+          container: {
+            padding: "1rem",
+            screen: {
+              lg: "1134px",
+              xl: "1134px",
+              "2xl": "1134px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Rowdies:wght@300;400;700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="leading-4 font-righteous m-0 p-0">
+    <header>
+      <nav
+        class="w-full z-50 p-0 flex items-center justify-between bg-white fixed top-0 md:px-3 lg:px-6"
+      >
+        <!-- Logo -->
+        <img class="ml-0 pl-0 w-32" src="assets/logo.png" alt="logo" />
+
+        <!-- Nav menu -->
+        <div class="hidden lg:block">
+          <ul class="flex flex-1 item-center gap-8">
+            <li
+              class="cursor-pointer hover:underline hover:decoration-purple-700 hover:text-purple-700"
+            >
+              Home
+            </li>
+            <li
+              class="cursor-pointer hover:underline hover:decoration-purple-700 hover:text-purple-700"
+            >
+              About
+            </li>
+            <li
+              class="cursor-pointer hover:underline hover:decoration-purple-700 hover:text-purple-700"
+            >
+              Courses
+            </li>
+            <li
+              class="cursor-pointer hover:underline hover:decoration-purple-700 hover:text-purple-700"
+            >
+              Contact
+            </li>
+          </ul>
+        </div>
+
+        <!-- Container for seperating right side elements -->
+        <div class="flex items-center mx-2 md:mx-3 pl-2 px-4 lg:mx-10 gap-20">
+          <!-- nav icons -->
+          <img
+            class="align-bottom h-8 w-28"
+            src="assets/nav-icons.svg"
+            alt="cart profile search icons group"
+          />
+
+          <!-- login signup -->
+          <div class="hidden md:flex gap-4">
+            <!-- login button -->
+            <button
+              class="px-4 font-saira underline decoration-purple-500 hover:text-purple-600"
+              type="button"
+            >
+              Login
+            </button>
+            <!-- sign up btn -->
+            <button
+              class="p-4 font-saira bg-gradient-to-br from-gradient-left-blue to-gradient-right-purple text-white rounded-md hover:text-black lg:px-6"
+              type="button"
+            >
+              Sign Up
+            </button>
+          </div>
+
+          <!-- hamburger for small screen -->
+          <i class="fa-solid fa-bars md:hidden"></i>
+        </div>
+      </nav>
+
+      <!-- Hero section -->
+      <section
+        class="relative text-white bg-gradient-to-bl from-hero-back-right-purple to-hero-back-left-blue mt-16 pb-0"
+      >
+        <!-- heading -->
+        <div
+          class="container flex flex-col-reverse mx-auto lg:flex-row pt-28 justify-between"
+        >
+          <!-- Hero left -->
+          <div class="flex-col w-full gap-10 mb-20 lg:w-[45%] pb-0">
+            <div class="w-full flex-col">
+              <p class="pb-4">Successful coaches are visionaries</p>
+              <h1 class="text-5xl leading-normal my-10 lg:text-7xl">
+                Good
+                <span class="text-h1-h2-sub-btn-blue break-keep">coaching</span>
+                is good teaching & nothing else.
+              </h1>
+            </div>
+
+            <!-- Button -->
+            <div
+              class="flex my-10 items-center gap-6 text-sm md:text-base lg:text-lg"
+            >
+              <button
+                class="p-4 text-white rounded-md border border-white hover:text-black lg:px-6 font-light hover:bg-white"
+              >
+                View Courses
+              </button>
+              <button class="hover:underline decoration-white">
+                Get Free Consultation
+              </button>
+            </div>
+
+            <!-- Form -->
+            <form
+              class="my-8 mb-4 flex items-center w-full z-10 md:my-10 lg:my-12"
+            >
+              <input
+                class="text-black w-full font-normal ml-0 py-6 px-3 m-4 rounded-md"
+                placeholder="What do you want to learn today?"
+              />
+              <button
+                class="flex items-center bg-blue-500 hover:bg-white text-white hover:text-blue-500 py-4 px-6 -translate-x-32 rounded  transition-colors duration-300 "
+              >
+                <img
+                  src="assets/search-icon.svg"
+                  alt="Search"
+                  class="h-4 w-4 mr-2"
+                />
+                Search
+              </button>
+            </form>
+          </div>
+
+          <!-- Hero right -->
+          <div class="relative flex flex-wrap">
+            <div class="relative mt-10 pl-32 mb-[300px]">
+              <img
+                src="assets/ellipse.png"
+                alt="white light"
+                height="700px"
+                width="400px"
+                class="relative -right-18 top-10 rounded-full"
+              />
+              <img
+                src="assets/hero.png"
+                alt="women hugging laptop"
+                width="400px"
+                class="absolute top-0 z-10 lg:top-10 -bottom-40"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- small testimony -->
+        <div class="flex absolute left-8 top-14 lg:left-1/2  gap-4 mb-20 w-72">
+          <img src="assets/quote-circle-lines.png" alt="lines" />
+          <div class="text-sm flex flex-col space-y-5">
+            <p class="font-medium">Shyam</p>
+            <p class="text-wrap">
+              In a coaching role, you ask the questions and rely more on your
+              staff, who become the experts, to provide the information.
+            </p>
+            <p class="text-xs text-number-blue">4.9</p>
+          </div>
+        </div>
+        <!-- Floating polygons -->
+        <div
+          class="hidden lg:block absolute w-[500px] h-[300px] -bottom-24 mt-16 left-[40%]"
+        >
+          <div
+            class="absolute -top-10 bottom-0 w-64 h-full rounded-t-full border-2 border-slate-400"
+          >
+            <div
+              class="absolute top-4 left-4 bottom-0 w-56 h-full rounded-t-full border-2 border-dashed border-slate-400"
+            >
+              <div
+                class="absolute top-4 left-4 w-48 h-full rounded-t-full border-2 border-slate-400"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Logo section -->
+      <section
+        class="relative z-10 bg-gradient-to-b from-logo-sec-top-blue to-logo-sec-bottom-purple"
+      >
+        <div
+          class="container grid grid-cols-2 gap-14 p-16 py-12 md:grid-cols-3 mx-auto place-items-center lg:grid-cols-6"
+        >
+          <img src="assets/spotify.png" alt="spotify" />
+          <img src="assets/amazon.png" alt="amazon" />
+          <img src="assets/spotify.png" alt="spotify" />
+          <img src="assets/cisco.png" alt="cisco" />
+          <img src="assets/logitech.png" alt="logitech" />
+          <img src="assets/amazon.png" alt="amazon" />
+        </div>
+      </section>
+    </header>
+
+    <!-- Featured courses -->
+    <section
+      class="bg-gradient-to-b from-course-sec-back-top-white to-course-sec-bottom-blue"
+    >
+      <div class="container relative mx-auto md:p-2 lg:p-4">
+        <!-- Heading -->
+        <div class="flex flex-col items-center justify-center relative pt-20">
+          <h2
+            class="font-rowdies text-3xl text-center text-h2-gray lg:text-5xl"
+          >
+            Feautred <span class="text-course-sec-h2-lightblue">Course</span>
+          </h2>
+          <p class="font-3xl text-center mt-4 uppercase tracking-wide">
+            The feature courses are we invented our teaching part
+          </p>
+          <div
+            class="hidden md:border-[20px] rounded-full border-circle-border-skyblue h-24 w-24 absolute left-12 top-20"
+          ></div>
+        </div>
+
+        <!-- cards -->
+        <div
+          class="container font-saira grid grid-cols-1 sm:grid-cols-2 mx-auto lg:grid-cols-3 gap-14 p-2 mt-32"
+        >
+          <!-- card 1 -->
+          <div class="rounded-lg w-full">
+            <img
+              src="assets/3d-map-pins-gps-navigator-pin-checking-poins-3d-render-illustration.png"
+              alt="3d-map-pins-gps-navigator-pin-checking-poins-3d-render"
+              class="rounded-lg object-cover w-full"
+            />
+            <!-- card content -->
+            <div class="bg-white p-5 text-[15px]">
+              <div class="flex items-center justify-between my-5">
+                <span>1,957 Students</span>
+                <span>01h 59m</span>
+              </div>
+              <h3 class="text-xl font-semibold break-words">
+                Motion Graphics: Create a Nice Typography Animation
+              </h3>
+              <div class="flex items-center justify-between mt-8">
+                <span class="font-semibold">Rs.499</span>
+                <img
+                  src="assets/shopping-cart-icon.png"
+                  alt="shopping cart"
+                  class="w-5 h-5"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div class="rounded-lg w-full">
+            <img
+              src="assets/3d-jigsaw-puzzle-pieces-pink-background-problem-solving-business-concept-3d-render-illustration.png"
+              alt="3d-map-pins-gps-navigator-pin-checking-poins-3d-render"
+              class="rounded-lg object-cover w-full"
+            />
+            <!-- card content -->
+            <div class="bg-white p-5 text-[15px]">
+              <div class="flex items-center justify-between my-5">
+                <span>9,575 Students</span>
+                <span>01h 59m</span>
+              </div>
+              <h3 class="text-xl font-semibold break-words">
+                Motion Graphics: Create a Nice Typography Animation
+              </h3>
+              <div class="flex items-center justify-between mt-8">
+                <span class="font-semibold">Rs.499</span>
+                <img
+                  src="assets/shopping-cart-icon.png"
+                  alt="shopping cart"
+                  class="w-5 h-5"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+          <div class="rounded-lg w-full">
+            <img
+              src="assets/rocket-launch-laptop-flying-rocket-icon.png"
+              alt="rocket-launch-laptop-flying-rocket-icon"
+              class="rounded-lg object-cover w-full h"
+            />
+            <!-- card content -->
+            <div class="bg-white p-5 text-[15px]">
+              <div class="flex items-center justify-between my-5">
+                <span>2957 Students</span>
+                <span>02h 49m</span>
+              </div>
+              <h3 class="text-xl font-semibold break-words">
+                Education Software and PHP and JS System Script
+              </h3>
+              <div class="flex items-center justify-between mt-8">
+                <span class="font-semibold">Rs.499</span>
+                <img
+                  src="assets/shopping-cart-icon.png"
+                  alt="shopping cart"
+                  class="w-5 h-5"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- card 4 -->
+          <div class="rounded-lg w-full">
+            <img
+              src="assets/red-up-arrow-coin-stacks-pink-background.png"
+              alt="red-up-arrow-coin-stacks-pink-background"
+              class="rounded-lg object-cover w-full h"
+            />
+            <!-- card content -->
+            <div class="bg-white p-5 text-[15px]">
+              <div class="flex items-center justify-between my-5">
+                <span>5,457 Students</span>
+                <span>01h 49m</span>
+              </div>
+              <h3 class="text-xl font-semibold break-words">
+                The Complete Financial Analyst Training & Investing
+              </h3>
+              <div class="flex items-center justify-between mt-8">
+                <span class="font-semibold">Rs.499</span>
+                <img
+                  src="assets/shopping-cart-icon.png"
+                  alt="shopping cart"
+                  class="w-5 h-5"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- card 5 -->
+          <div class="rounded-lg w-full">
+            <img
+              src="assets/travel-concept-3d-illustration-airplane-flying-map-pin.png"
+              alt="travel-concept-3d-illustration-airplane-flying-map-pin"
+              class="rounded-lg object-cover w-full h"
+            />
+            <!-- card content -->
+            <div class="bg-white p-5 text-[15px]">
+              <div class="flex items-center justify-between my-5">
+                <span>595 Students</span>
+                <span>01h 49m</span>
+              </div>
+              <h3 class="text-xl font-semibold break-words">
+                Marketing 2023: Complete Guide To Instagram Growth
+              </h3>
+              <div class="flex items-center justify-between mt-8">
+                <span class="font-semibold">Rs.499</span>
+                <img
+                  src="assets/shopping-cart-icon.png"
+                  alt="shopping cart"
+                  class="w-5 h-5"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- card 6 -->
+          <div class="rounded-lg w-full">
+            <img
+              src="assets/online-banking-icon-money-saving-bank-bundles-money-coins-floating-around.png"
+              alt="online-banking-icon-money-saving-bank-bundles-money-coins-floating-around"
+              class="rounded-lg object-cover w-full"
+            />
+            <!-- card content -->
+            <div class="bg-white p-5 text-[15px]">
+              <div class="flex items-center justify-between my-5">
+                <span>458 Students</span>
+                <span>03h 00m</span>
+              </div>
+              <h3 class="text-xl font-semibold break-words">
+                Learn 3D Modelling and Design for Beginners
+              </h3>
+              <div class="flex items-center justify-between mt-8">
+                <span class="font-semibold">Rs.499</span>
+                <img
+                  src="assets/shopping-cart-icon.png"
+                  alt="shopping cart"
+                  class="w-5 h-5"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- explore courses -->
+        <div class="mt-20 flex items-center justify-center">
+          <button
+            class=" p-4 font-saira bg-gradient-to-br from-explore-course-btn-top-blue to-gradient-right-purple text-white rounded-md hover:text-black lg:px-6"
+            type="button"
+          >
+            Explore Courses
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- why choose us section -->
+     <section>
+      <div class="container mx-auto">
+
+      </div>
+     </section>
+  </body>
+</html>
