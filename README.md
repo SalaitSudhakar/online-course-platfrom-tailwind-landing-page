@@ -5,5 +5,4 @@
 
 ## Project URL
 Click to view my online leearning platform 👉 [Project URL](https://online-course-platform-landing-page.netlify.app/)
-## Note
-Kindly use VPN to view this project
+<mark>Kindly use VPN to view this project</mark>
