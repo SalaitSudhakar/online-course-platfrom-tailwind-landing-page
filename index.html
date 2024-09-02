@@ -160,10 +160,10 @@
       >
         <!-- heading -->
         <div
-          class="relative p-10 flex flex-col-reverse mx-auto lg:flex-row pt-28 justify-between"
+          class="relative p-10 px-0 md:px-10 md:pr-0 flex flex-col-reverse mx-auto lg:flex-row pt-28 justify-between"
         >
           <!-- Hero left -->
-          <div class="flex-col w-full gap-10 mb-20 lg:w-[45%] pb-0">
+          <div class="flex-col w-full gap-10 mb-20 px-10 lg:px-0 lg:w-[45%] pb-0">
             <div class="w-full flex-col">
               <p class="md:pb-4">Successful coaches are visionaries</p>
               <h1 class="text-5xl md:my-7 lg:my-10 mt-5 lg:text-7xl">
@@ -211,33 +211,26 @@
           </div>
 
           <!-- Hero right -->
-          <div class="relative flex mb-16 sm:mb-10 lg:mb-0">
-            <!--mb-40-->
-            <div class="relative mt-10 pl-32 mb-5">
-              <!--mb-[300px]-->
-              <!-- <img
-                src="assets/ellipse.png"
-                alt="white light"
-                height="700px"
-                width="400px"
-                class="relative -right-18 top-10 rounded-full"
-              /> -->
-              <img
-                src="assets/hero.png"
-                alt="women hugging laptop"
-                class="relative mt-10 h-500px w-400px sm:mt-0"
-              />
-              <!-- class="absolute top-0 z-10 lg:top-10 -bottom-40"  -->
-            </div>
+
+          <div
+            class="flex justify-center items-center relative mt-10 pl-32 mb-16 md:mb-24 bg-[url('assets/hero-bg-Ellipse.png')] bg-cover bg-no-repeat w-full"
+          >
+            <!--mb-[300px]-->
+            <img
+              src="assets/hero.png"
+              alt="women hugging laptop"
+              class="relative z-10 mt-16 min-h-[300px] min-w-[200px] max-w-[500px] "
+            />
+            <!-- class="absolute top-0 z-10 lg:top-10 -bottom-40"  -->
           </div>
         </div>
 
         <!-- small testimony -->
-        <div class="flex absolute left-8 top-14 lg:left-1/2 gap-4 mb-20 w-72">
+        <div class="flex absolute text-xs md:text-sm lg:text-base left-8 top-14 lg:left-1/2 gap-4 mb-20  w-44 sm:w-72">
           <img src="assets/quote-circle-lines.png" alt="lines" />
           <div class="text-sm flex flex-col space-y-5">
-            <p class="font-medium">Shyam</p>
-            <p class="text-wrap">
+            <p class="font-medium text-xs md:text-sm lg:text-base">Shyam</p>
+            <p class="text-wrap text-xs md:text-sm lg:text-base">
               In a coaching role, you ask the questions and rely more on your
               staff, who become the experts, to provide the information.
             </p>
